@@ -1,0 +1,52 @@
+# Arquivo .gitignore para projetos Django.
+# Este arquivo lista os arquivos e pastas que o Git deve ignorar.
+# Ambiente Virtual
+# Nunca envie seu ambiente virtual. Outros desenvolvedores criarão os seus.
+.venv/
+venv/
+env/
+ENV/
+
+# Arquivos de Cache e Compilados do Python
+# Gerados automaticamente pelo Python para acelerar a execução.
+pycache/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de Banco de Dados
+# O banco de dados de desenvolvimento não deve ser versionado.
+# Em produção, você usará um banco de dados separado.
+*.sqlite3
+db.sqlite3
+
+# Arquivos de IDEs e Editores
+# Configurações específicas do seu ambiente de desenvolvimento.
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos de Dependências do Python (pip)
+# Use um arquivo requirements.txt para listar as dependências.
+pip-wheel-metadata/
+local_settings.py
+pip-log.txt
+
+# Arquivos de Segredos e Variáveis de Ambiente
+# NUNCA envie segredos para o GitHub! Use variáveis de ambiente.
+.env
+*.env
+
+# Arquivos Estáticos Coletados
+# A pasta gerada pelo comando collectstatic.
+# Essa pasta é gerada no servidor de produção, não precisa estar no repositório.
+/staticfiles/
+/static_root/
+
+# Arquivos de Log
+*.log
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
