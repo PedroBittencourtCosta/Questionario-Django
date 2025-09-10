@@ -49,6 +49,12 @@ TAILWIND_APP_NAME = 'theme'
 
 NPM_BIN_PATH = 'C:\Program Files\\nodejs\\npm.cmd'
 
+LOGIN_REDIRECT_URL = '/'
+
+LOGIN_URL = '/contas/login/'
+
+LOGOUT_REDIRECT_URL = '/'
+
 if DEBUG:
     # Add django_browser_reload only in DEBUG mode
     INSTALLED_APPS += ['django_browser_reload']

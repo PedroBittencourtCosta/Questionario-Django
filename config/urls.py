@@ -21,7 +21,8 @@ from config import settings, views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home)
+    path('', views.home),
+    path('contas/', include('usuario.urls')),
 ]
 
 if settings.DEBUG:

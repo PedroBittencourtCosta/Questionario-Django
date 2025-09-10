@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}Meu App{% endblock %}</title>
+
+    {% load static tailwind_tags %}
+	{% tailwind_css %}
+
+    <!-- Não precisamos do Alpine.js aqui, pois não há menus interativos -->
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 
+      Container principal que ocupa a tela inteira e centra o conteúdo.
+      Perfeito para um formulário de login.
+    -->
+    <main class="flex items-center justify-center min-h-screen">
+        {% block content %}
+            <!-- O conteúdo da página de login/cadastro será inserido aqui -->
+        {% endblock %}
+    </main>
+
+</body>
+</html>
