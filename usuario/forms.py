@@ -39,3 +39,14 @@ class UsuarioChangeForm(UserChangeForm):
         # Os campos aqui são os que aparecerão no formulário de EDIÇÃO.
         fields = ('email', 'first_name', 'last_name', 'cpf', 'numero_celular', 'role', 'is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')
 
+
+class UsuarioRegisterForm(UserCreationForm):
+    """
+    Um formulário para criar novos utilizadores. Herda de UserCreationForm para obter
+    o tratamento seguro de senhas.
+    """
+    class Meta(UserCreationForm.Meta):
+        # Dizemos ao formulário para usar o nosso modelo personalizado 'Usuario'
+        model = Usuario
+        # Especificamos os campos que devem aparecer no formulário
+        fields = ('first_name', 'last_name', 'email', 'cpf', 'numero_celular')
